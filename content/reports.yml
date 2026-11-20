@@ -1,0 +1,412 @@
+# =========================================================
+# INFORMES (Argentinos por la Educación).
+# Alimenta: Publications Archive (todos), Data & Research (featured: true)
+# y la portada (home: 1, 2, 3...).
+#
+# Título, fecha, URL, PDF y autores se tomaron de argentinosporlaeducacion.org
+# (19-nov-2026), en el orden de autoría que figura en cada página.
+# Fecha = fecha de publicación en la web.
+#
+# Lo que falta por informe (lo escribes tú):
+#   title_en, summary_en, roles, topics  -> y, en los destacados:
+#   question, findings, contribution, tools, data_sources
+#
+# Valores para "roles":
+#   data-analysis   -> Data analysis
+#   indicators      -> Indicator design
+#   writing         -> Writing
+#   coordination    -> Coordination
+#   communication   -> Communication of results
+#   experts         -> Work with expert co-authors
+#   media           -> TV & radio appearances
+#
+# Para DESTACAR un informe en "Data & Research", añade en su bloque:
+#   featured: true
+#   question: "..."
+#   findings:
+#     - "..."
+#     - "..."
+#   contribution: "..."
+#   tools: [R, Stata]
+#   data_sources: [PISA 2022]
+# Para ponerlo en la portada: home: 1  (2, 3...)
+#
+# Para añadir uno nuevo: copia un bloque, pégalo al final y usa el siguiente id (r32...).
+# =========================================================
+
+reports:
+
+  - id: r01
+    title: "Importancia del nivel inicial: evidencia, costos y desafíos pendientes"
+    title_en: PENDING
+    language: es
+    date: "2023-06-29"
+    url: https://argentinosporlaeducacion.org/informe/importancia-del-nivel-inicial-evidencia-costos-y-desafios-pendientes/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2023/06/Importancia-del-nivel-inicial_-evidencia-costos-y-desafios-pendientes.pdf
+    authors: "Martín De Simone, Martín Nistal, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r02
+    title: "Política educativa basada en evidencia: tutorías"
+    title_en: PENDING
+    language: es
+    date: "2023-07-13"
+    url: https://argentinosporlaeducacion.org/informe/politica-educativa-basada-en-evidencia-tutorias/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2023/07/Como-mejorar-los-aprendizajes_-las-tutorias-una-politica-educativa-clave.pdf
+    authors: "Graciela Cappelletti, Eugenia Orlicki, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r03
+    title: "Índice de Resultados Escolares: ¿Cuántos estudiantes llegan al final de la secundaria en tiempo y forma?"
+    title_en: PENDING
+    language: es
+    date: "2023-08-24"
+    url: https://argentinosporlaeducacion.org/informe/indice-de-resultados-escolares-cuantos-estudiantes-llegan-al-final-de-la-secundaria-en-tiempo-y-forma/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2023/08/Indice-de-resultados-escolares_-%C2%BFCuantos-estudiantes-llegan-al-final-de-la-secundaria-en-tiempo-y-forma_.pdf
+    authors: "Irene Kit, Martín Nistal, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r04
+    title: "Desigualdad y Aprendizajes. Comparaciones entre Argentina y América Latina"
+    title_en: PENDING
+    language: es
+    date: "2023-10-05"
+    url: https://argentinosporlaeducacion.org/informe/desigualdad-y-aprendizajes-comparaciones-entre-argentina-y-america-latina/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2023/10/Desigualdad-y-Aprendizajes.-Comparaciones-entre-Argentina-y-America-Latina.pdf
+    authors: "Montserrat Serio, Eugenia Orlicki, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r05
+    title: "Subvenciones a la educación privada: ¿Para qué y para quiénes?"
+    title_en: PENDING
+    language: es
+    date: "2023-11-09"
+    url: https://argentinosporlaeducacion.org/informe/subvenciones-a-la-educacion-privada-para-que-y-para-quienes/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2023/11/Subvenciones-a-la-educacion-privada_-%C2%BFpara-que-y-para-quienes_.pdf
+    authors: "Mauro Moschetti, Martín Nistal, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r06
+    title: "Presupuesto educativo nacional 2024"
+    title_en: PENDING
+    language: es
+    date: "2023-12-01"
+    url: https://argentinosporlaeducacion.org/informe/presupuesto-educativo-nacional-2024/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2023/11/Presupuesto-2024-.pdf
+    authors: "Javier Curcio, Leyre Sáenz Guillén, Víctor Volman"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r07
+    title: "¿Cómo le fue a Argentina en las pruebas PISA 2022?"
+    title_en: PENDING
+    language: es
+    date: "2023-12-05"
+    url: https://argentinosporlaeducacion.org/informe/como-le-fue-a-argentina-en-las-pruebas-pisa-2022/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2023/12/%C2%BFComo-le-fue-a-Argentina-en-PISA-2022_.pdf
+    authors: "Martín Nistal, Eugenia Orlicki, Leyre Sáenz Guillén, Víctor Volman"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r08
+    title: "Programas de alimentación en escuelas de gestión estatal"
+    title_en: PENDING
+    language: es
+    date: "2024-01-11"
+    url: https://argentinosporlaeducacion.org/informe/programas-de-alimentacion-en-escuelas-de-gestion-estatal/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/01/Programas-de-alimentacion-en-escuelas-de-gestion-estatal-1.pdf
+    authors: "Cecilia Adrogué, Eugenia Orlicki, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r09
+    title: "Brechas de género: desde la escuela al mercado laboral"
+    title_en: PENDING
+    language: es
+    date: "2024-01-25"
+    url: https://argentinosporlaeducacion.org/informe/brechas-de-genero-desde-la-escuela-al-mercado-laboral/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/01/Brechas-de-genero.-Desde-la-escuela-al-mercado-laboral-Argentinos-por-la-Educacion.pdf
+    authors: "Ivana Templado, Martín Nistal, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r10
+    title: "Calendarios escolares 2024"
+    title_en: PENDING
+    language: es
+    date: "2024-02-22"
+    url: https://argentinosporlaeducacion.org/informe/calendarios-escolares-2024/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/02/Calendarios-Escolares-2024.pdf
+    authors: "Gustavo Zorzoli, Martín Nistal, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r11
+    title: "Uso de pruebas estandarizadas para la mejora continua"
+    title_en: PENDING
+    language: es
+    date: "2024-03-07"
+    url: https://argentinosporlaeducacion.org/informe/uso-de-pruebas-estandarizadas-para-la-mejora-continua/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/03/Uso-de-pruebas-estandarizadas-para-la-mejora-continua.pdf
+    authors: "Alejandro Ganimian, Leyre Sáenz Guillén, Martín Nistal"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r12
+    title: "Desigualdad social, ¿desigualdad en las aulas?"
+    title_en: PENDING
+    language: es
+    date: "2024-04-11"
+    url: https://argentinosporlaeducacion.org/informe/desigualdad-social-desigualdad-en-las-aulas/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/04/Desigualdad-social-%C2%BFdesigualdad-en-las-aulas_.pdf
+    authors: "Emmanuel Vazquez, Leyre Sáenz Guillén, Martín Nistal"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r13
+    title: "Situaciones de violencia en los hogares: detección y prevención desde las escuelas"
+    title_en: PENDING
+    language: es
+    date: "2024-05-16"
+    url: https://argentinosporlaeducacion.org/informe/situaciones-de-violencia-en-los-hogares-deteccion-y-prevencion-desde-las-escuela/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/05/Situaciones-de-violencia-en-los-hogares_-deteccion-y-prevencion-desde-las-escuelas.pdf
+    authors: "Mercedes Sidders, Eugenia Orlicki, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r14
+    title: "Índice de Resultados Escolares: comparación entre países de América Latina"
+    title_en: PENDING
+    language: es
+    date: "2024-05-30"
+    url: https://argentinosporlaeducacion.org/informe/indice-de-resultados-escolares-comparacion-entre-paises-de-america-latina/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/05/Indice-de-Resultados-Escolares_-comparacion-entre-paises-de-America-Latina.pdf
+    authors: "Martín Nistal, Eugenia Orlicki, Leyre Sáenz Guillén, Víctor Volman"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r15
+    title: "Natalidad y demanda educativa"
+    title_en: PENDING
+    language: es
+    date: "2024-06-27"
+    url: https://argentinosporlaeducacion.org/informe/natalidad-y-demanda-educativa/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/06/Natalidad-y-demanda-educativa.pdf
+    authors: "Rafael Rofman, Martín Nistal, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r16
+    title: "Cargos y suplencias docentes en el nivel primario"
+    title_en: PENDING
+    language: es
+    date: "2024-08-08"
+    url: https://argentinosporlaeducacion.org/informe/cargos-y-suplencias-docentes-en-el-nivel-primario/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/08/Cargos-y-suplencias-docentes.pdf
+    authors: "Martín De Simone, Martín Nistal, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r17
+    title: "Evolución del financiamiento educativo"
+    title_en: PENDING
+    language: es
+    date: "2024-09-26"
+    url: https://argentinosporlaeducacion.org/informe/evolucion-del-financiamiento-educativo/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/09/Evolucion-del-financiamiento-educativo-1.pdf
+    authors: "Alejandro Morduchowicz, Leyre Sáenz Guillén, Víctor Volman"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r18
+    title: "Presupuesto Educativo Nacional 2025"
+    title_en: PENDING
+    language: es
+    date: "2024-10-17"
+    url: https://argentinosporlaeducacion.org/informe/presupuesto-educativo-nacional-2025/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/10/Presupuesto-Educativo-Nacional-2025.pdf
+    authors: "Javier Curcio, María Sol Alzú, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r19
+    title: "Índice de Resultados Escolares de primaria: Evolución y análisis por departamento"
+    title_en: PENDING
+    language: es
+    date: "2024-10-31"
+    url: https://argentinosporlaeducacion.org/informe/indice-de-resultados-escolares-de-primaria-evolucion-y-analisis-por-departamento/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/10/Indice-de-Resultados-Escolares-de-primaria_-Evolucion-y-analisis-por-departamento-1.pdf
+    authors: "Sandra Ziegler, Eugenia Orlicki, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r20
+    title: "Sistemas nominales de información educativa en Argentina"
+    title_en: PENDING
+    language: es
+    date: "2024-11-21"
+    url: https://argentinosporlaeducacion.org/informe/sistemas-nominales-de-informacion-educativa-en-argentina/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/11/Sistemas-nominales-de-informacion-educativa-en-Argentina-2024-1.pdf
+    authors: "Flavia Ferrari Inchauspe, Leyre Sáenz Guillén, Víctor Volman"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r21
+    title: "2do informe de monitoreo: Campaña Nacional por la Alfabetización"
+    title_en: PENDING
+    language: es
+    date: "2024-12-19"
+    url: https://argentinosporlaeducacion.org/informe/2do-informe-de-monitoreo-campana-nacional-por-la-alfabetizacion/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2024/12/2%C2%B0-INFORME-DE-MONITOREO_-Campana-Nacional-por-la-Alfabetizacion.pdf
+    authors: "María Sol Alzú, Massimiliano Pisani, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r22
+    title: "Vacaciones de verano: evidencia sobre su impacto en el aprendizaje"
+    title_en: PENDING
+    language: es
+    date: "2025-01-09"
+    url: https://argentinosporlaeducacion.org/informe/vacaciones-de-verano-evidencia-sobre-su-impacto-en-el-aprendizaje/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2025/01/Vacaciones-de-verano_-evidencia-sobre-su-impacto-en-el-aprendizaje.pdf
+    authors: "Irene Kit, María Sol Alzú, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r23
+    title: "Formación continua de los maestros de grado"
+    title_en: PENDING
+    language: es
+    date: "2025-01-23"
+    url: https://argentinosporlaeducacion.org/informe/formacion-continua-de-los-maestros-de-grado/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2025/01/Formacion-continua-de-los-maestros-de-grado.pdf
+    authors: "Emmanuel Lista, Eugenia Orlicki, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r24
+    title: "Calendarios escolares 2025"
+    title_en: PENDING
+    language: es
+    date: "2025-02-20"
+    url: https://argentinosporlaeducacion.org/informe/calendarios-escolares-2025/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2025/02/Calendarios-escolares-2025-1.pdf
+    authors: "Gustavo Zorzoli, María Sol Alzú, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r25
+    title: "Celular en el aula: uso, distracción y aprendizajes"
+    title_en: PENDING
+    language: es
+    date: "2025-03-06"
+    url: https://argentinosporlaeducacion.org/informe/celular-en-el-aula-uso-distraccion-y-aprendizajes/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2025/03/Uso-Celular-en-el-aula.pdf
+    authors: "Andrea Goldin, María Sol Alzú, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r26
+    title: "4to informe de monitoreo: Campaña Nacional por la Alfabetización"
+    title_en: PENDING
+    language: es
+    date: "2025-03-21"
+    url: https://argentinosporlaeducacion.org/informe/4to-informe-de-monitoreo-campana-nacional-por-la-alfabetizacion/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2025/03/4to-informe-de-monitoreo_-Campana-Nacional-por-la-Alfabetizacion.pdf
+    authors: "María Sol Alzú, Leyre Sáenz Guillén, Victor Volman"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r27
+    title: "Matrícula y segregación escolar en América Latina: una mirada a la última década"
+    title_en: PENDING
+    language: es
+    date: "2025-03-27"
+    url: https://argentinosporlaeducacion.org/informe/matricula-y-segregacion-escolar-en-america-latina-una-mirada-a-la-ultima-decada/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2025/03/Matricula-y-segregacion-escolar-en-America-Latina_-una-mirada-a-la-ultima-decada.pdf
+    authors: "Emmanuel Vazquez, María Sol Alzú, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r28
+    title: "El nivel socioeconómico no lo define todo: el rol de las escuelas en el rendimiento"
+    title_en: PENDING
+    language: es
+    date: "2025-04-24"
+    url: https://argentinosporlaeducacion.org/informe/el-nivel-socioeconomico-no-lo-define-todo-el-rol-de-las-escuelas-en-el-rendimiento/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2025/04/El-nivel-socioeconomico-no-lo-define-todo_-el-rol-de-las-escuelas-en-el-rendimiento-1.pdf
+    authors: "Mariano Tommasi, Cecilia Adrogué, María Victoria Anauati, Leyre Sáenz Guillén, María Sol Alzú"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r29
+    title: "Aprender Alfabetización 2024: Resultados de 3° grado de la primaria"
+    title_en: PENDING
+    language: es
+    date: "2025-05-06"
+    url: https://argentinosporlaeducacion.org/informe/aprender-alfabetizacion-2024-resultados-de-3-grado-de-la-primaria/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2025/05/Aprender-2024-Provincias.pdf
+    authors: "Leyre Sáenz Guillén, Victor Volman"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r30
+    title: "Eficiencia de la inversión educativa provincial en Argentina"
+    title_en: PENDING
+    language: es
+    date: "2025-05-22"
+    url: https://argentinosporlaeducacion.org/informe/eficiencia-de-la-inversion-educativa-provincial-en-argentina/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2025/05/Eficiencia-de-la-inversion-educativa-provincial-en-Argentina-2.pdf
+    authors: "María Sol Alzú, Leyre Sáenz Guillén, Ivana Templado"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  - id: r31
+    title: "Institutos de formación docente"
+    title_en: PENDING
+    language: es
+    date: "2025-07-03"
+    url: https://argentinosporlaeducacion.org/informe/institutos-de-formacion-docente-2/
+    pdf: https://argentinosporlaeducacion.org/wp-content/uploads/2025/07/Institutos-de-formacion-docente.pdf
+    authors: "Romina de Luca, María Sol Alzú, Leyre Sáenz Guillén"
+    roles: [data-analysis, experts, media]
+    topics: []
+    summary_en: PENDING
+
+  # ---- FALTAN 2 para llegar a 33: no aparecen con tu nombre en la web. ----
+  # Añádelos aquí como r32 y r33 cuando sepas cuáles son.

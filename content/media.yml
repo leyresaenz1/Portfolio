@@ -1,0 +1,587 @@
+# =========================================================
+# MEDIOS — una SELECCIÓN (no las 255).
+# Alimenta "Media & Interviews" y la sección "Related" de cada informe.
+#
+# kind (obligatorio, define la etiqueta):
+#   interview -> te entrevistan (TV, radio, prensa, podcast)
+#   quote     -> un/a periodista te cita o cita tu investigación
+#   coverage  -> un/a periodista escribe sobre un informe en el que participaste
+# medium: tv | radio | print | online | podcast
+# report: id del informe relacionado (r01...r31) -> se enlaza automáticamente.
+# credits_me: true -> la nota te nombra como coautora del informe.
+# draft: true -> se oculta en la web pública.
+# =========================================================
+
+reach:
+  # Frase sobre el alcance total. Debe ser exacta. Tu CV dice
+  # "255 live media interviews ... between 2023 and 2025", pero tu
+  # descripción dice que las 255 incluyen entrevistas, citas y artículos.
+  # Escribe aquí la versión correcta.
+  statement: PENDING
+
+items:
+
+  # ---------------- ENTREVISTAS ----------------
+
+  # Verificadas en YouTube el 19-nov-2026 (canal, título y fecha de subida).
+  # La fecha es la de subida del vídeo; suele coincidir con la emisión.
+
+  # Entrevista enlazada en tu CV. Canal oficial de LA NACION (LN+).
+  # ¿Es la de Luis Novaresio? Si sí, añade: journalist: Luis Novaresio  y el programa.
+  - id: m01
+    home: 3
+    kind: interview
+    medium: tv
+    outlet: LN+
+    program: ""
+    title: "Mañana, marcha de universitarios en el Congreso; el análisis de Leyre Sáenz Guillén"
+    title_en: PENDING
+    date: "2024-10-01"
+    language: es
+    url: https://www.youtube.com/watch?v=IYYHPEOuuQw&t=239s
+    journalist: ""
+    report: ""
+    note_en: PENDING
+
+  # Canal oficial de LA NACION (LN+). Sobre el informe de alimentación escolar.
+  # (El canal de Argentinos por la Educación tiene dos vídeos "Leyre Sáenz Guillén en LN+"
+  #  del 11 y 12-ene-2024, probablemente de esta misma aparición: K4oK4vLEw9w, km9ebQjtkwM.)
+  - id: m32
+    kind: interview
+    medium: tv
+    outlet: LN+
+    program: ""
+    title: "Creció 21% la cantidad de alumnos que comen en la escuela; el análisis de Leyre Saenz Guillen"
+    title_en: PENDING
+    date: "2024-01-11"
+    language: es
+    url: https://www.youtube.com/watch?v=PvldbHy42eA
+    journalist: ""
+    report: r08
+    note_en: PENDING
+
+  # Infobae: nota de Patricio Zunini sobre un panel del ciclo "Hoy la educación es noticia"
+  # (Argentinos por la Educación + Ticmas) en el que participaste junto a Cecilia Veleda,
+  # Javier Curcio y Adriana González. ¿Es una de tus dos de estudio en Infobae?
+  - id: m33
+    kind: interview
+    medium: online
+    outlet: Infobae
+    program: "Hoy la educación es noticia"
+    title: "El estado de la educación en la Argentina: de los problemas urgentes a las razones para el optimismo"
+    title_en: PENDING
+    date: "2024-09-06"
+    language: es
+    url: https://www.infobae.com/educacion/2024/09/06/el-estado-de-la-educacion-en-argentina-de-los-problemas-urgentes-a-las-razones-para-el-optimismo/
+    journalist: Patricio Zunini
+    report: ""
+    note_en: PENDING
+
+  # CNN Radio Argentina — aparece en el índice de búsqueda, pero la página está bloqueada
+  # desde aquí (error 451), así que NO está verificada. Ábrela tú: si eres tú (¿con Mariana Arias?),
+  # completa journalist/program y cambia draft a false.
+  - id: m34
+    draft: true
+    kind: interview
+    medium: radio
+    outlet: CNN Radio Argentina
+    program: ""
+    title: "Según un informe, entre 2014 y 2022 la cantidad de nacimientos en Argentina bajó un 36%"
+    title_en: PENDING
+    date: "2024-06-27"
+    language: es
+    url: https://cnnespanol.cnn.com/radio/2024/06/27/segun-un-informe-entre-2014-y-2022-la-cantidad-de-nacimientos-en-argentina-bajo-un-36
+    journalist: PENDING
+    report: r15
+    note_en: PENDING
+
+  - id: m35
+    kind: interview
+    medium: radio
+    outlet: Radio Rivadavia
+    program: ""
+    title: "Leyre Saenz Guillén: “La educación es la sexta categoría a nivel importancia que ponen las familias”"
+    title_en: PENDING
+    date: "2025-07-15"
+    language: es
+    url: https://www.youtube.com/watch?v=9jN68K0_yRI
+    journalist: ""
+    report: ""
+    note_en: PENDING
+
+  - id: m36
+    kind: interview
+    medium: tv
+    outlet: Canal de la Ciudad
+    program: "HNT a las 8"
+    title: "Hablamos con Leyre Sáenz Guillén, analista del observatorio Arg. por Edu."
+    title_en: PENDING
+    date: "2024-01-26"
+    language: es
+    url: https://www.youtube.com/watch?v=ccVvW9NSQRA
+    journalist: ""
+    report: ""
+    note_en: PENDING
+
+  - id: m37
+    kind: interview
+    medium: tv
+    outlet: Canal de la Ciudad
+    program: ""
+    title: "Solo 13 de cada 100 alumnos terminan la escuela a tiempo - Leyre Sáenz Guillén"
+    title_en: PENDING
+    date: "2023-08-25"
+    language: es
+    url: https://www.youtube.com/watch?v=KxGA-r2I7ZA
+    journalist: ""
+    report: r03
+    note_en: PENDING
+
+  - id: m38
+    kind: interview
+    medium: tv
+    outlet: Canal E
+    program: ""
+    title: "Leyre Sáenz Guillén sobre la evolución del financiamiento educativo en Argentina"
+    title_en: PENDING
+    date: "2024-10-04"
+    language: es
+    url: https://www.youtube.com/watch?v=cJQZSNeafhk
+    journalist: ""
+    report: r17
+    note_en: PENDING
+
+  - id: m39
+    kind: interview
+    medium: radio
+    outlet: Radio Cultura Buenos Aires
+    program: "Al Derecho y Al Revés"
+    title: "Leyre Sáenz Guillén en Al Derecho y Al Revés"
+    title_en: PENDING
+    date: "2025-04-24"
+    language: es
+    url: https://www.youtube.com/watch?v=1FzTziAAyWA
+    journalist: ""
+    report: ""
+    note_en: PENDING
+
+  # FALTAN (buscadas el 19-nov-2026 en YouTube —canales TN, América TV, Infobae—,
+  # en las webs de los canales y en la página de Infobae con tu nombre; no aparecen):
+  #   - TN, en persona, sobre "Celular en el aula" (r25). El vídeo de TN de ese día
+  #     (youtube.com/watch?v=P2JJG_1-SCw, 6-mar-2025) es la entrevista a Andrea Goldin.
+  #   - TN por Zoom (varias)
+  #   - América TV, con Antonio Laje
+  #   - Infobae, entrevistas en estudio
+  # Si tienes el clip (aunque sea un archivo o un enlace de Instagram/X), pásamelo.
+  # Si no hay enlace público, se puede listar sin enlace (url: "") indicando medio,
+  # programa y fecha.
+
+  # ---- PLANTILLA para más entrevistas de TV/radio (copia y rellena) ----
+  # - id: m40
+  #   draft: false
+  #   kind: interview
+  #   medium: tv
+  #   outlet: ""
+  #   program: ""
+  #   title: ""
+  #   date: ""
+  #   language: es
+  #   url: ""
+  #   report: ""
+  #   note_en: ""
+
+  # ---------------- COBERTURA DE INFORMES ----------------
+  # Una nota por informe, verificada el 19-nov-2026: medio, titular,
+  # fecha, autor/a y que cita el informe. No hay cobertura verificada de r04.
+  # Revisa cuáles quieres mostrar (draft: true para ocultar) y añade title_en / note_en.
+
+  - id: m02
+    kind: coverage
+    medium: online
+    outlet: El Cronista
+    title: "Faltan construir más de 24.000 jardines de infantes para mejorar la educación, según un informe"
+    title_en: PENDING
+    date: "2023-06-29"
+    language: es
+    url: https://www.cronista.com/informacion-gral/faltan-construir-mas-de-24000-jardines-de-infantes-para-mejorar-la-educacion-segun-un-informe
+    journalist: ""
+    report: r01
+    credits_me: true
+
+  - id: m03
+    kind: coverage
+    medium: online
+    outlet: La Capital (Mar del Plata)
+    title: "Cómo mejorar los aprendizajes: las tutorías, una política educativa clave"
+    title_en: PENDING
+    date: "2023-07-16"
+    language: es
+    url: https://www.lacapitalmdp.com/como-mejorar-los-aprendizajes-las-tutorias-una-politica-educativa-clave/
+    journalist: ""
+    report: r02
+    credits_me: true
+
+  - id: m04
+    kind: coverage
+    medium: online
+    outlet: Los Andes
+    title: "En Mendoza, sólo 11 de cada 100 alumnos termina quinto año en tiempo y forma"
+    title_en: PENDING
+    date: "2023-08-25"
+    language: es
+    url: https://www.losandes.com.ar/sociedad/en-mendoza-solo-11-de-cada-100-alumnos-llega-a-quinto-ano-en-tiempo-y-forma/
+    journalist: ""
+    report: r03
+    credits_me: false
+
+  - id: m05
+    kind: coverage
+    medium: online
+    outlet: El Cronista
+    title: "Uno por uno, los distritos que más dinero destinan a financiar a las escuelas privadas"
+    title_en: PENDING
+    date: "2023-11-11"
+    language: es
+    url: https://www.cronista.com/economia-politica/uno-por-uno-los-distritos-que-mas-dinero-aportan-a-las-escuelas-privadas
+    journalist: ""
+    report: r05
+    credits_me: true
+
+  - id: m06
+    kind: coverage
+    medium: online
+    outlet: El Ancasti
+    title: "Advierten que en 2024 habría menos recursos para Educación"
+    title_en: PENDING
+    date: "2023-12-03"
+    language: es
+    url: https://www.elancasti.com.ar/edicion-impresa/advierten-que-2024-habria-menos-recursos-educacion-n541274
+    journalist: ""
+    report: r06
+    credits_me: true
+
+  - id: m07
+    kind: coverage
+    medium: online
+    outlet: Ámbito
+    title: "Pruebas PISA: 7 de cada 10 estudiantes argentinos no logra niveles básicos de Matemáticas y la mitad no alcanza niveles mínimos en lectura"
+    title_en: PENDING
+    date: "2023-12-05"
+    language: es
+    url: https://www.ambito.com/informacion-general/pruebas-pisa-7-cada-10-estudiantes-argentinos-no-logra-niveles-basicos-matematicas-y-la-mitad-no-alcanza-niveles-minimos-lectura-n5891738
+    journalist: Gabriel Matera
+    report: r07
+    credits_me: true
+
+  - id: m08
+    kind: coverage
+    medium: online
+    outlet: El Heraldo
+    title: "En Entre Ríos el 37% de los alumnos recibe el almuerzo en escuelas estatales"
+    title_en: PENDING
+    date: "2024-01-11"
+    language: es
+    url: https://www.elheraldo.com.ar/noticias/interes-general/en-entre-rios-el-37-de-los-alumnos-recibe-el-almuerzo-en-escuelas-estatales
+    journalist: ""
+    report: r08
+    credits_me: true
+
+  - id: m09
+    kind: coverage
+    medium: online
+    outlet: Chequeado
+    title: "Brechas de género: a igual carrera universitaria, las mujeres obtienen salarios inferiores a los varones"
+    title_en: PENDING
+    date: "2024-01-31"
+    language: es
+    url: https://chequeado.com/el-explicador/brechas-de-genero-a-igual-carrera-universitaria-las-mujeres-obtienen-salarios-inferiores-a-los-varones/
+    journalist: Delfina Corti
+    report: r09
+    credits_me: true
+
+  - id: m10
+    kind: coverage
+    medium: online
+    outlet: Chequeado
+    title: "Calendario escolar 2024: sólo 5 provincias planificaron 190 días de clase"
+    title_en: PENDING
+    date: "2024-02-22"
+    language: es
+    url: https://chequeado.com/el-explicador/inicio-de-clases-2024-solo-5-provincias-planificaron-190-dias-de-clase-en-2024/
+    journalist: Delfina Corti
+    report: r10
+    credits_me: false
+
+  - id: m11
+    kind: coverage
+    medium: online
+    outlet: La Nación
+    title: "“Es una política con rendimientos positivos”: alertan sobre el bajo acceso a una herramienta clave para mejorar los aprendizajes"
+    title_en: PENDING
+    date: "2024-03-06"
+    language: es
+    url: https://www.lanacion.com.ar/sociedad/es-una-politica-con-rendimientos-positivos-alertan-sobre-el-bajo-acceso-a-una-herramienta-clave-para-nid06032024/
+    journalist: Silvina Vitale
+    report: r11
+    credits_me: true
+
+  - id: m12
+    kind: coverage
+    medium: online
+    outlet: C5N
+    title: "La desigualdad en las aulas es mayor en las escuelas privadas que en las públicas"
+    title_en: PENDING
+    date: "2024-04-11"
+    language: es
+    url: https://www.c5n.com/sociedad/la-desigualdad-las-aulas-es-mayor-las-escuelas-privadas-que-las-publicas-n153534
+    journalist: ""
+    report: r12
+    credits_me: true
+
+  - id: m13
+    kind: coverage
+    medium: online
+    outlet: Primera Edición
+    title: "Misiones, la provincia donde más alumnos cuentan sobre la violencia en sus casas"
+    title_en: PENDING
+    date: "2024-05-16"
+    language: es
+    url: https://primeraedicion.com.ar/nota/100881297/misiones-la-provincia-donde-mas-alumnos-cuentan-sobre-la-violencia-en-sus-casas
+    journalist: ""
+    report: r13
+    credits_me: true
+
+  - id: m14
+    kind: coverage
+    medium: online
+    outlet: C5N
+    title: "En Argentina, solo 22 de cada 100 chicos de 15 años transitan su escolaridad en tiempo y forma"
+    title_en: PENDING
+    date: "2024-05-31"
+    language: es
+    url: https://www.c5n.com/sociedad/en-argentina-solo-22-cada-100-chicos-15-anos-transitan-su-escolaridad-tiempo-y-forma-n160304
+    journalist: ""
+    report: r14
+    credits_me: true
+
+  - id: m15
+    kind: coverage
+    medium: online
+    outlet: El Litoral (via RED/ACCIÓN)
+    title: "Cayó 36% la natalidad: afirman que puede ser una “oportunidad demográfica” para mejorar la calidad educativa"
+    title_en: PENDING
+    date: "2024-06"          # la página no muestra el día; verifica
+    language: es
+    url: https://www.ellitoral.com/educacion/cayo-36-natalidad-afirman-puede-oportunidad-demografica-mejorar-calidad-educativa_0_HAwevY3N8C.html
+    journalist: ""
+    report: r15
+    credits_me: true
+
+  - id: m16
+    kind: coverage
+    medium: online
+    outlet: La Nación
+    title: "Un dato que inquieta: advierten sobre el fuerte impacto negativo de la rotación docente en los alumnos de primaria"
+    title_en: PENDING
+    date: "2024-08-07"
+    language: es
+    url: https://www.lanacion.com.ar/sociedad/un-dato-que-inquieta-advierten-sobre-el-fuerte-impacto-negativo-de-la-rotacion-docente-en-los-nid07082024/
+    journalist: Soledad Vallejos
+    report: r16
+    credits_me: true
+
+  - id: m17
+    kind: coverage
+    medium: online
+    outlet: El Cronista
+    title: "La meta del 6% del PBI solo se cumplió una vez en 20 años: cómo le va a Milei y qué planea para 2025"
+    title_en: PENDING
+    date: "2025-01-04"
+    language: es
+    url: https://www.cronista.com/economia-politica/la-meta-del-6-del-pbi-solo-se-cumplio-una-vez-en-20-anos-como-le-va-a-milei-y-que-planea-para-2025
+    journalist: Giannina Nigro
+    report: r17
+    credits_me: true
+
+  - id: m18
+    kind: coverage
+    medium: online
+    outlet: Chequeado
+    title: "El presupuesto educativo de 2025 será el de menor participación sobre el PBI de la última década"
+    title_en: PENDING
+    date: "2024-10-17"
+    language: es
+    url: https://chequeado.com/el-explicador/el-presupuesto-educativo-de-2025-sera-el-de-menor-participacion-sobre-el-pbi-de-la-ultima-decada/
+    journalist: Delfina Corti
+    report: r18
+    credits_me: true
+
+  - id: m19
+    kind: coverage
+    medium: online
+    outlet: Infobae
+    title: "Solo 45 de cada 100 alumnos llegan a 6° grado a tiempo y con saberes básicos de Lengua y Matemática"
+    title_en: PENDING
+    date: "2024-10-31"
+    language: es
+    url: https://www.infobae.com/educacion/2024/10/31/solo-45-de-cada-100-alumnos-llegan-a-6-grado-a-tiempo-y-con-saberes-basicos-de-lengua-y-matematica/
+    journalist: Alfredo Dillon
+    report: r19
+    credits_me: true
+
+  - id: m20
+    kind: coverage
+    medium: online
+    outlet: El Cronista
+    title: "Por qué sólo 10 provincias tienen los datos de todos sus estudiantes y por qué es tan importante"
+    title_en: PENDING
+    date: "2024-11-21"
+    language: es
+    url: https://www.cronista.com/informacion-gral/por-que-solo-10-provincias-tienen-los-datos-de-todos-sus-estudiantes-y-por-que-es-tan-importante
+    journalist: ""
+    report: r20
+    credits_me: true
+
+  - id: m21
+    kind: coverage
+    medium: online
+    outlet: Infobae
+    title: "Alfabetización: tras el impulso de 2024, la Nación y las provincias definen acciones para 2025"
+    title_en: PENDING
+    date: "2024-12-18"
+    language: es
+    url: https://www.infobae.com/educacion/2024/12/19/alfabetizacion-tras-el-impulso-de-2024-la-nacion-y-las-provincias-definen-acciones-para-2025/
+    journalist: Alfredo Dillon
+    report: r21
+    credits_me: true
+
+  - id: m22
+    kind: coverage
+    medium: online
+    outlet: C5N
+    title: "¿Cuánto impactan las vacaciones de verano en el aprendizaje escolar?"
+    title_en: PENDING
+    date: "2025-01-09"
+    language: es
+    url: https://www.c5n.com/sociedad/cuanto-impactan-las-vacaciones-verano-el-aprendizaje-escolar-n186949
+    journalist: ""
+    report: r22
+    credits_me: false
+
+  # (Sustituye a la nota de C5N, que no te nombraba.)
+  - id: m23
+    kind: coverage
+    medium: online
+    outlet: Infobae
+    title: "Los docentes piden mayor formación en alfabetización, educación inclusiva y tecnología"
+    title_en: PENDING
+    date: "2025-01-22"
+    language: es
+    url: https://www.infobae.com/educacion/2025/01/23/los-docentes-piden-mayor-formacion-en-alfabetizacion-educacion-inclusiva-y-tecnologia/
+    journalist: Patricio Zunini
+    report: r23
+    credits_me: true
+
+  - id: m24
+    kind: coverage
+    medium: online
+    outlet: Chequeado
+    title: "Calendario escolar 2025: el 42% de los alumnos de primaria tendrán que recuperar horas de clase"
+    title_en: PENDING
+    date: "2025-02-20"
+    language: es
+    url: https://chequeado.com/el-explicador/calendario-escolar-2025-el-42-de-los-alumnos-de-primaria-tendran-que-recuperar-horas-de-clase/
+    journalist: Delfina Corti
+    report: r24
+    credits_me: true
+
+  - id: m25
+    kind: coverage
+    medium: online
+    outlet: Chequeado
+    title: "Celulares en clase: Argentina lidera el ranking de los países en donde los chicos más se distraen con dispositivos en el aula"
+    title_en: PENDING
+    date: "2025-03-06"
+    language: es
+    url: https://chequeado.com/ultimas-noticias/argentina-es-el-pais-en-donde-los-chicos-mas-se-distraen-con-los-celulares-en-clase/
+    journalist: Delfina Corti
+    report: r25
+    credits_me: true
+
+  - id: m26
+    kind: coverage
+    medium: online
+    outlet: A24
+    title: "Cuáles fueron las provincias que evaluaron a los alumnos de primaria de forma censal en 2024"
+    title_en: PENDING
+    date: "2025-03-21"
+    language: es
+    url: https://www.a24.com/actualidad/cuales-fueron-las-provincias-que-evaluaron-los-alumnos-primaria-forma-censal-2024-n1415041
+    journalist: Pablo Maneglia
+    report: r26
+    credits_me: true
+
+  - id: m27
+    kind: coverage
+    medium: online
+    outlet: Chequeado
+    title: "La Argentina es el único país de Latinoamérica que profundizó la brecha socioeconómica entre las escuelas secundarias estatales y privadas"
+    title_en: PENDING
+    date: "2025-03-27"
+    language: es
+    url: https://chequeado.com/el-explicador/escuela-secundaria-la-argentina-es-el-unico-pais-de-latinoamerica-que-profundizo-la-brecha-socioeconomica-entre-las-escuelas-estatales-y-privadas/
+    journalist: Delfina Corti
+    report: r27
+    credits_me: false
+
+  - id: m28
+    kind: coverage
+    medium: online
+    outlet: El Cronista
+    title: "Revelan cuáles son los factores que hacen que los estudiantes argentinos rindan mejor en la escuela"
+    title_en: PENDING
+    date: "2025-04-25"
+    language: es
+    url: https://www.cronista.com/informacion-gral/revelan-cuales-son-los-factores-que-hacen-que-los-estudiantes-argentinos-rindan-mejor-en-la-escuela
+    journalist: ""
+    report: r28
+    credits_me: true
+
+  - id: m29
+    kind: coverage
+    medium: online
+    outlet: A24
+    title: "Pruebas Aprender: el dato clave sobre el aprendizaje de lectura en los chicos argentinos"
+    title_en: PENDING
+    date: "2025-05-07"
+    language: es
+    url: https://www.a24.com/actualidad/pruebas-aprender-el-dato-clave-el-aprendizaje-lectura-los-chicos-argentinos-n1429799
+    journalist: Pablo Maneglia
+    report: r29
+    credits_me: true
+
+  - id: m30
+    kind: coverage
+    medium: online
+    outlet: C5N
+    title: "Revelan que las provincias podrían mejorar hasta 52 puntos en aprendizajes si optimizan el uso de recursos educativos"
+    title_en: PENDING
+    date: "2025-05-21"
+    language: es
+    url: https://www.c5n.com/sociedad/revelan-que-las-provincias-podrian-mejorar-52-puntos-aprendizajes-si-optimizan-el-uso-recursos-educativos-n201690
+    journalist: ""
+    report: r30
+    credits_me: true
+
+  - id: m31
+    kind: coverage
+    medium: online
+    outlet: A24
+    title: "Un dato que preocupa: se egresan más docentes, pero no hay más alumnos"
+    title_en: PENDING
+    date: "2025-07-03"
+    language: es
+    url: https://www.a24.com/actualidad/un-dato-que-preocupa-se-egresan-mas-docentes-pero-no-hay-mas-alumnos-n1452978
+    journalist: Pablo Maneglia
+    report: r31
+    credits_me: true

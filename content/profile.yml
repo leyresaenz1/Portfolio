@@ -1,0 +1,71 @@
+# =========================================================
+# PERFIL — datos generales que aparecen en todo el sitio.
+# Todo lo que diga PENDING se oculta en la web pública y se
+# marca en amarillo en la vista previa local.
+# Los datos ya rellenados salen de tu CV (no se ha inventado nada).
+# =========================================================
+
+name: Leyre Sáenz Guillén
+
+# Línea pequeña sobre tu nombre en la portada (p. ej. tus temas).
+eyebrow: PENDING
+
+# Frase principal bajo tu nombre. Ahora mismo es el resumen de tu CV:
+# cámbiala por tu propia versión orientada a periodismo de datos.
+tagline: "Quantitative economist with experience using complex data to measure outcomes, inform decisions, and communicate evidence clearly to technical and non-technical audiences."
+
+# 2–3 frases de presentación en la portada (escríbelas tú).
+intro: PENDING
+
+# Biografía más larga para la página "CV & Contact".
+# Separa párrafos con una línea en blanco. Usa | para texto de varias líneas:
+# bio: |
+#   Primer párrafo...
+#
+#   Segundo párrafo...
+bio: PENDING
+
+location: Cambridge, MA
+email: lsaenzguillen@hks.harvard.edu
+linkedin: https://www.linkedin.com/in/leyre-s%C3%A1enz-guill%C3%A9n/
+github: https://github.com/leyresaenz1
+languages: "Spanish and Catalan (native), English (fluent), Portuguese (intermediate), French (basic), Marathi (basic)"
+
+# Sube tu CV en PDF a la carpeta /files y pon aquí la ruta, p. ej.:
+# cv_pdf: files/CV_Leyre_Saenz_Guillen.pdf
+cv_pdf: PENDING
+
+# Fecha de la última actualización (aparece en el pie). Formato AAAA-MM-DD.
+updated: PENDING
+
+# Textos de introducción de cada sección (opcionales, en inglés).
+research_intro: PENDING
+writing_intro: PENDING
+media_intro: PENDING
+archive_intro: PENDING
+
+# Cifras de la portada. Una cifra solo se publica si "value" y "label" están completos.
+stats:
+  - value: "33"
+    label: "reports at Argentinos por la Educación"
+  # OJO: tu CV dice "255 live media interviews on local and national television,
+  # radio, and newspapers", pero en tu descripción las 255 incluyen también citas
+  # en prensa y artículos que cubren informes. Decide la redacción exacta antes de publicar.
+  - value: "255"
+    label: PENDING
+  - value: PENDING
+    label: "signed columns"
+
+# Áreas temáticas (chips en la página CV & Contact). Ejemplo: [Education, Labor markets]
+focus: []
+
+education:
+  - degree: Master in Public Administration in International Development (MPA/ID)
+    school: Harvard Kennedy School
+    years: 2025–2027
+  - degree: Master in Economics
+    school: Universidad de San Andrés
+    years: 2022–2023
+  - degree: Bachelor in Economics
+    school: Universidad de San Andrés
+    years: 2018–2021

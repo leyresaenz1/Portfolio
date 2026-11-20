@@ -1,0 +1,47 @@
+# =========================================================
+# ESCRITURA CON TU FIRMA — columnas y blog de India.
+# Alimenta la página "Selected Writing" (y la portada si pones home: N).
+# =========================================================
+
+columns:
+
+  # Columna firmada en La Nación (verificada en tu página de autora:
+  # lanacion.com.ar/autor/LeyreSáenzGuillén — es la única que aparece allí).
+  # Si se basa en el informe de vacaciones de verano, pon related_report: r22.
+  - id: w01
+    home: 2                  # opcional: posición en portada
+    title: "Que el verano no amplíe la brecha educativa"
+    title_en: PENDING        # titular traducido al inglés
+    outlet: La Nación
+    date: "2025-01-22"
+    language: es
+    url: https://www.lanacion.com.ar/opinion/que-el-verano-no-amplie-la-brecha-educativa-nid22012025/
+    summary_en: PENDING      # 1–2 frases en inglés sobre de qué trata
+    related_report: ""       # opcional: id del informe en el que se basa (p. ej. r22)
+
+  # ---- PLANTILLA DE COLUMNA (copia el bloque para cada una) ----
+  # - id: w02
+  #   title: ""
+  #   title_en: ""
+  #   outlet: ""
+  #   date: ""
+  #   language: es
+  #   url: ""
+  #   summary_en: ""
+  #   related_report: ""
+
+blog:
+  name: PENDING              # nombre del blog
+  url: PENDING               # enlace a la portada del blog
+  context_en: PENDING        # 1–2 frases: contexto de la pasantía y de qué trata el blog
+  posts:
+
+    # ---- PLANTILLA DE ENTRADA DEL BLOG ----
+    - id: b01
+      draft: true
+      title: PENDING
+      title_en: ""           # solo si el original no está en inglés
+      date: PENDING
+      language: en
+      url: PENDING
+      summary_en: PENDING

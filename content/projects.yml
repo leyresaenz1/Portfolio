@@ -1,0 +1,29 @@
+# =========================================================
+# PROYECTOS DE CÓDIGO Y DATOS (GitHub) — R, Python, Stata.
+# Aparecen al final de "Data & Research".
+# =========================================================
+
+projects:
+
+  # De tu CV. Completa resumen y herramientas.
+  - id: p01
+    draft: false
+    type: Undergraduate thesis
+    title: "The COVID-19 Lockdown and Its Impact on Fertility in Argentina"
+    title_en: ""
+    date: "2021"
+    language: PENDING        # idioma del repositorio/tesis: es | en
+    url: https://github.com/leyresaenz1/Tesis-Economia
+    tools: []                # p. ej. [Stata, R]
+    summary_en: PENDING
+
+  # ---- PLANTILLA ----
+  - id: p02
+    draft: true
+    type: PENDING            # p. ej. Data analysis, Scraper, Visualization
+    title: PENDING
+    date: PENDING
+    language: en
+    url: PENDING
+    tools: []
+    summary_en: PENDING
