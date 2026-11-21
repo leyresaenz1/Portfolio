@@ -17,7 +17,7 @@
   const SECTIONS = {
     research: {
       title: 'Research',
-      desc: 'Sole-authored working papers presented at the Annual Meetings of the Argentine Association of Political Economy (AAEP).',
+      desc: 'Academic papers.',
     },
     archive: {
       title: 'Policy Reports',
