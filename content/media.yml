@@ -176,6 +176,43 @@ items:
   # Si no hay enlace público, se puede listar sin enlace (url: "") indicando medio,
   # programa y fecha.
 
+  # ---------------- CITAS (te citan como especialista) ----------------
+  # Verificada el 21-nov-2026: te nombra y cita textualmente sobre tamaño de aula.
+  - id: m47
+    kind: quote
+    medium: online
+    outlet: Clarín
+    title: "La caída en los nacimientos y la insólita postal que se verá en 2030: ¿una oportunidad histórica?"
+    title_en: PENDING
+    date: "2026-01-29"
+    language: es
+    url: https://www.clarin.com/sociedad/caida-nacimientos-insolita-postal-vera-2030-oportunidad-historica_0_np6jPHKiMh.html
+    journalist: Emilia Vexler
+    report: ""
+    note_en: PENDING
+
+  # ---------------- MÁS COBERTURA EN LA NACIÓN ----------------
+  # Verificadas el 21-nov-2026: autora, fecha y que citan el informe por su nombre.
+  # credits_me: true solo donde el texto visible te nombra (el muro de pago corta algunas notas).
+  - { id: m41, kind: coverage, medium: online, outlet: La Nación, journalist: Lucila Marin, date: "2023-10-04", language: es, report: r04, credits_me: true, title_en: PENDING,
+      title: "Desigualdad educativa: qué puesto ocupa la Argentina en un ranking latinoamericano y por qué encendió alarmas",
+      url: "https://www.lanacion.com.ar/sociedad/desigualdad-educativa-que-puesto-ocupa-la-argentina-en-un-ranking-latinoamericano-y-por-que-encendio-nid04102023/" }
+  - { id: m42, kind: coverage, medium: online, outlet: La Nación, journalist: Guillermina Leudesdorf, date: "2023-08-24", language: es, report: r03, credits_me: false, title_en: PENDING,
+      title: "Egreso de la secundaria: el número que pone en alerta a los expertos",
+      url: "https://www.lanacion.com.ar/sociedad/egreso-de-la-secundaria-el-numero-que-pone-en-alerta-a-los-expertos-nid23082023/" }
+  - { id: m43, kind: coverage, medium: online, outlet: La Nación, journalist: Camila Súnico Ainchil, date: "2024-09-25", language: es, report: r17, credits_me: false, title_en: PENDING,
+      title: "Universidades versus escuelas: la inversión educativa en la Argentina creció más en el nivel superior",
+      url: "https://www.lanacion.com.ar/sociedad/universidades-versus-escuelas-la-inversion-educativa-en-la-argentina-crecio-mas-en-el-nivel-superior-nid25092024/" }
+  - { id: m44, kind: coverage, medium: online, outlet: La Nación, journalist: Evangelina Himitian, date: "2024-10-30", language: es, report: r19, credits_me: false, title_en: PENDING,
+      title: "Un dato que enciende alarmas: difunden la cifra de chicos que terminan la primaria sin la formación esperada",
+      url: "https://www.lanacion.com.ar/sociedad/un-dato-que-enciende-alarmas-difunden-la-cifra-de-chicos-que-terminan-la-primaria-sin-la-formacion-nid30102024/" }
+  - { id: m45, kind: coverage, medium: online, outlet: La Nación, journalist: Lucila Marin, date: "2024-11-20", language: es, report: r20, credits_me: true, title_en: PENDING,
+      title: "Crisis educativa: preocupa que menos de la mitad del país cuenta con datos fehacientes de sus estudiantes",
+      url: "https://www.lanacion.com.ar/sociedad/crisis-educativa-preocupa-que-menos-de-la-mitad-del-pais-cuenta-con-datos-fehacientes-de-sus-nid20112024/" }
+  - { id: m46, kind: coverage, medium: online, outlet: La Nación, journalist: Lucila Marin, date: "2025-07-14", language: es, report: r31, credits_me: false, title_en: PENDING,
+      title: "La inquietante paradoja que revela un informe sobre docentes en la Argentina",
+      url: "https://www.lanacion.com.ar/sociedad/la-inquietante-paradoja-que-revela-un-informe-sobre-docentes-en-la-argentina-nid14072025/" }
+
   # ---- PLANTILLA para más entrevistas de TV/radio (copia y rellena) ----
   # - id: m40
   #   draft: false

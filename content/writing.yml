@@ -19,6 +19,31 @@ columns:
     summary_en: PENDING      # 1–2 frases en inglés sobre de qué trata
     related_report: ""       # opcional: id del informe en el que se basa (p. ej. r22)
 
+  # Columnas en El Día de Gualeguaychú, sección Opinión, firmadas por ti
+  # (verificadas en eldiaonline.com/autor/leyre-saenz-guillen, 21-nov-2026).
+  - id: w02
+    title: "¿Existe hoy en las aulas la diversidad socioeconómica?"
+    title_en: PENDING
+    outlet: El Día (Gualeguaychú)
+    date: "2024-04-13"
+    language: es
+    url: https://www.eldiaonline.com/existe-hoy-en-las-aulas-la-diversidad-socioeconomica
+    summary_en: PENDING
+    related_report: ""       # ¿se basa en r12 (Desigualdad social, ¿desigualdad en las aulas?)? Si sí, pon r12
+
+  - id: w03
+    title: "Brechas de Género en el mercado laboral: ¿Preferencia o discriminación estructural?"
+    title_en: PENDING
+    outlet: El Día (Gualeguaychú)
+    date: "2024-03-16"
+    language: es
+    url: https://www.eldiaonline.com/brechas-de-genero-en-el-mercado-laboral-preferencia-o-discriminacion-estructural
+    summary_en: PENDING
+    related_report: ""       # ¿se basa en r09 (Brechas de género)? Si sí, pon r09
+
+  # FALTAN: tus columnas en diarios de Mendoza y San Luis no aparecen en buscadores
+  # ni en las webs de Los Andes, MDZ o El Diario de la República. Pásame medio + título o enlace.
+
   # ---- PLANTILLA DE COLUMNA (copia el bloque para cada una) ----
   # - id: w02
   #   title: ""
