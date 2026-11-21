@@ -9,7 +9,7 @@ columns:
   # lanacion.com.ar/autor/LeyreSáenzGuillén — es la única que aparece allí).
   # Si se basa en el informe de vacaciones de verano, pon related_report: r22.
   - id: w01
-    home: 2                  # opcional: posición en portada
+    home: 4                  # opcional: posición en portada
     title: "Que el verano no amplíe la brecha educativa"
     title_en: PENDING        # titular traducido al inglés
     outlet: La Nación
@@ -30,18 +30,17 @@ columns:
   #   summary_en: ""
   #   related_report: ""
 
+# Blog de la pasantía en India (títulos y fechas tomados del blog, 21-nov-2026).
 blog:
-  name: PENDING              # nombre del blog
-  url: PENDING               # enlace a la portada del blog
-  context_en: PENDING        # 1–2 frases: contexto de la pasantía y de qué trata el blog
+  name: "A Summer in India: My Internship at The Antara Foundation"
+  url: https://summeratantara.blogspot.com/
+  context_en: PENDING        # opcional: 1–2 frases tuyas sobre el blog
   posts:
-
-    # ---- PLANTILLA DE ENTRADA DEL BLOG ----
-    - id: b01
-      draft: true
-      title: PENDING
-      title_en: ""           # solo si el original no está en inglés
-      date: PENDING
-      language: en
-      url: PENDING
-      summary_en: PENDING
+    - { id: b08, title: "The End of an Era", date: "2026-08-29", language: en, url: "https://summeratantara.blogspot.com/2026/08/the-end-of-era.html" }
+    - { id: b07, title: "Turning Field Notes into Final Deliverables", date: "2026-08-29", language: en, url: "https://summeratantara.blogspot.com/2026/08/turning-field-notes-into-final.html" }
+    - { id: b06, title: "Back to the Field", date: "2026-08-07", language: en, url: "https://summeratantara.blogspot.com/2026/08/back-to-field.html" }
+    - { id: b05, title: "5/8: Daily Life at TAF", date: "2026-08-07", language: en, url: "https://summeratantara.blogspot.com/2026/08/58-daily-life-at-taf.html" }
+    - { id: b04, title: "First Field Visit", date: "2026-07-16", language: en, url: "https://summeratantara.blogspot.com/2026/07/first-field-visit.html" }
+    - { id: b03, title: "Week 2: Data, Sarees, and Delhi", date: "2026-06-29", language: en, url: "https://summeratantara.blogspot.com/2026/06/week-2-data-sarees-and-delhi.html" }
+    - { id: b02, title: "A Latina in India: My First Week at The Antara Foundation", date: "2026-06-19", language: en, url: "https://summeratantara.blogspot.com/2026/06/a-latina-in-india-my-first-week-at.html" }
+    - { id: b01, title: "About this project", date: "2026-05-11", language: en, url: "https://summeratantara.blogspot.com/2026/05/about-this-project.html" }

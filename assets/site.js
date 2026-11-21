@@ -12,13 +12,35 @@
     ['localhost', '127.0.0.1', ''].includes(location.hostname) ||
     new URLSearchParams(location.search).has('preview');
 
+  // One place for each section's name and a one-line description of what it holds.
+  // The description is shown under the page title unless profile.yml has its own *_intro.
+  const SECTIONS = {
+    research: {
+      title: 'Research',
+      desc: 'Papers I wrote as sole author and presented at academic conferences, with the code behind them.',
+    },
+    archive: {
+      title: 'Policy Reports',
+      desc: 'Reports I co-authored at the Data Observatory of Argentinos por la Educación (2023–2025): a few in depth, then the full list with links to the originals (in Spanish) and their press coverage.',
+    },
+    media: {
+      title: 'Media & Interviews',
+      desc: 'A selection of TV and radio interviews, and of articles by other journalists that covered or cited my reports.',
+    },
+    writing: {
+      title: 'Op-eds & Blog',
+      desc: 'Opinion pieces I wrote and signed, and a blog from my summer fieldwork in India.',
+    },
+    about: { title: 'CV & Contact', desc: '' },
+  };
+
   const NAV = [
     ['index.html', 'Home', 'home'],
-    ['research.html', 'Data & Research', 'research'],
-    ['writing.html', 'Selected Writing', 'writing'],
-    ['media.html', 'Media & Interviews', 'media'],
-    ['archive.html', 'Publications Archive', 'archive'],
-    ['about.html', 'CV & Contact', 'about'],
+    ['research.html', SECTIONS.research.title, 'research'],
+    ['archive.html', SECTIONS.archive.title, 'archive'],
+    ['media.html', SECTIONS.media.title, 'media'],
+    ['writing.html', SECTIONS.writing.title, 'writing'],
+    ['about.html', SECTIONS.about.title, 'about'],
   ];
 
   const ROLE_LABELS = {
@@ -34,9 +56,10 @@
   // Authorship types. Colors: own work (blue), collective report (green), press (amber).
   const KIND = {
     report: { label: 'Collective report', cls: 'b-team' },
-    column: { label: 'Bylined column', cls: 'b-own' },
-    blog: { label: 'Bylined blog post', cls: 'b-own' },
+    column: { label: 'Op-ed', cls: 'b-own' },
+    blog: { label: 'Blog post', cls: 'b-own' },
     project: { label: 'Code & data', cls: 'b-own' },
+    paper: { label: 'Working paper', cls: 'b-own' },
     interview: { label: 'Interview', cls: 'b-press' },
     quote: { label: 'Cites my research', cls: 'b-press' },
     coverage: { label: 'Covers a report', cls: 'b-press' },
@@ -161,8 +184,8 @@
     document.getElementById('site-footer').innerHTML =
       `<div class="wrap footer-inner"><span>© ${new Date().getFullYear()} ${esc(name)}${updated ? ' · ' + updated : ''}</span><span>${links}</span></div>`;
     if (has(p.name)) {
-      const t = document.title;
-      if (!t.includes(p.name)) document.title = t ? `${t} — ${p.name}` : p.name;
+      const t = SECTIONS[page] ? SECTIONS[page].title : '';
+      document.title = t ? `${t} — ${p.name}` : p.name;
     }
   }
 
@@ -173,9 +196,11 @@
       <li><span class="badge b-press">Press</span> by other journalists: interviews, quotes, coverage</li>
     </ul>`;
 
-  function pageHead(title, intro, introLabel, eyebrow) {
-    return `<header class="page-head">${eyebrow ? `<p class="eyebrow">${eyebrow}</p>` : ''}<h1>${esc(title)}</h1>` +
-      `${has(intro) ? `<p class="intro">${esc(intro)}</p>` : introLabel ? pend(introLabel) : ''}</header>`;
+  function pageHead(key, intro) {
+    const s = SECTIONS[key];
+    const text = has(intro) ? intro : s.desc;
+    return `<header class="page-head"><h1>${esc(s.title)}</h1>` +
+      `${has(text) ? `<p class="intro">${esc(text)}</p>` : ''}</header>`;
   }
 
   /* ---------------- generic card ---------------- */
@@ -232,8 +257,6 @@
   function renderHome(d) {
     const p = d.profile;
     const links = [
-      `<li><a href="research.html">Data &amp; Research</a></li>`,
-      `<li><a href="writing.html">Selected Writing</a></li>`,
       safeUrl(p.cv_pdf) && `<li><a href="${esc(p.cv_pdf)}" target="_blank" rel="noopener">CV (PDF)</a></li>`,
       safeUrl(p.github) && `<li><a href="${esc(p.github)}" target="_blank" rel="noopener">GitHub</a></li>`,
       has(p.email) && `<li><a href="mailto:${esc(p.email)}">Email</a></li>`,
@@ -259,7 +282,7 @@
       </section>
       ${stats ? `<ul class="stats">${stats}</ul>` : ''}
       <section class="section">
-        <h2 class="section-title">Selected work <a href="archive.html">Full archive →</a></h2>
+        <h2 class="section-title">Selected work <a href="archive.html">All reports →</a></h2>
         ${legend()}
         ${selected.length ? `<div class="grid">${selected.map((x) => card(x, d)).join('')}</div>`
           : `<p class="empty">${PREVIEW ? 'Mark items with <code>home: 1</code>, <code>home: 2</code>… in the content files to feature them here.' : ''}</p>`}
@@ -278,43 +301,63 @@
         </ul></div>`
       : PREVIEW ? `<div class="related">${pend('link coverage: add report: ' + r.id + ' to items in media.yml')}</div>` : '';
 
+    // On the public site, a section with no content yet is left out entirely.
+    const cell = (title, filled, body) => (filled || PREVIEW ? `<div><h4>${title}</h4>${body}</div>` : '');
+
     const findings = has(r.findings)
       ? `<ul class="findings">${r.findings.filter(has).map((f) => `<li>${esc(f)}</li>`).join('')}</ul>`
       : pend('key findings');
 
-    return `<article class="feature${r.draft && PREVIEW ? ' is-draft' : ''}" id="${esc(r.id)}">
+    return `<article class="feature${r.draft && PREVIEW ? ' is-draft' : ''}" id="f-${esc(r.id)}">
       <p class="kicker">${badge('report')}<span>${fmtDate(r.date)}</span>${langChip(r.language)}${draftTag(r)}</p>
       <h3 class="headline">${headline(r)}</h3>
       ${originalTitle(r)}
       <p class="source">${sourceLine({ ...r, _kind: 'report' }, d)}</p>
       <div class="feature-grid">
-        <div><h4>The question</h4><p>${text(r.question, 'research question')}</p></div>
-        <div><h4>Key findings</h4>${findings}</div>
-        <div><h4>My contribution</h4>${chips(r.roles, ROLE_LABELS)}<p style="margin-top:8px">${text(r.contribution, 'your contribution, in your words')}</p></div>
-        <div><h4>Tools &amp; data</h4>${has(r.tools) || has(r.data_sources) ? chips(r.tools) + chips(r.data_sources) : pend('tools / data sources')}</div>
+        ${cell('The question', has(r.question), `<p>${text(r.question, 'research question')}</p>`)}
+        ${cell('Key findings', has(r.findings), findings)}
+        ${cell('My contribution', has(r.roles) || has(r.contribution), `${chips(r.roles, ROLE_LABELS)}${has(r.contribution) || PREVIEW ? `<p style="margin-top:8px">${text(r.contribution, 'your contribution, in your words')}</p>` : ''}`)}
+        ${cell('Tools &amp; data', has(r.tools) || has(r.data_sources), has(r.tools) || has(r.data_sources) ? chips(r.tools) + chips(r.data_sources) : pend('tools / data sources'))}
       </div>
       ${related}
       <p class="actions">
         ${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${readLabel(r, 'Read the report')}</a>` : pend('report URL')}
         ${pdf ? `<a href="${esc(pdf)}" target="_blank" rel="noopener">PDF ↗</a>` : ''}
-        <a href="archive.html#${esc(r.id)}">In the archive</a>
       </p>
     </article>`;
   }
 
   function renderResearch(d) {
     const p = d.profile;
-    const featured = d.reports.filter((r) => r.featured);
-    return `${pageHead('Data & Research', p.research_intro, 'intro for this page (research_intro)')}
-      <section>
-        <h2 class="section-title">Featured analyses <a href="archive.html">All reports →</a></h2>
-        ${featured.length ? featured.map((r) => featureReport(r, d)).join('')
-          : `<p class="empty">${PREVIEW ? 'Set <code>featured: true</code> on 4–6 reports in content/reports.yml.' : ''}</p>`}
-      </section>
-      ${d.projects.length ? `<section class="section">
-        <h2 class="section-title">Code &amp; data projects ${safeUrl(p.github) ? `<a href="${esc(p.github)}" target="_blank" rel="noopener">GitHub →</a>` : ''}</h2>
-        <div class="grid">${d.projects.map((x) => projectCard(x)).join('')}</div>
-      </section>` : ''}`;
+    const papers = d.projects.filter((x) => x.type === 'paper').sort(byDateDesc);
+    const code = d.projects.filter((x) => x.type !== 'paper');
+    return `${pageHead('research', p.research_intro)}
+      ${papers.length ? `<section>
+        <h2 class="section-title">Papers</h2>
+        <div class="list">${papers.map((x) => paperCard(x)).join('')}</div>
+      </section>` : ''}
+      ${code.length ? `<section class="section">
+        <h2 class="section-title">Code &amp; data ${safeUrl(p.github) ? `<a href="${esc(p.github)}" target="_blank" rel="noopener">GitHub →</a>` : ''}</h2>
+        <div class="grid">${code.map((x) => projectCard(x)).join('')}</div>
+      </section>` : ''}
+      <p class="more" style="margin-top:40px"><a href="archive.html">Policy reports →</a></p>`;
+  }
+
+  function paperCard(x) {
+    const url = safeUrl(x.url);
+    const code = safeUrl(x.code);
+    return `<article class="story paper${x.draft && PREVIEW ? ' is-draft' : ''}" id="${esc(x.id)}">
+      <p class="kicker">${badge('paper')}<span>${fmtDate(x.date)}</span>${langChip(x.language)}${draftTag(x)}</p>
+      <h3 class="headline">${headline(x)}</h3>
+      ${originalTitle(x)}
+      <p class="source">Sole author${has(x.venue) ? ' · ' + esc(x.venue) : ''}${has(x.note) ? ' · ' + esc(x.note) : ''}</p>
+      ${has(x.summary_en) ? `<p class="dek">${esc(x.summary_en)}</p>` : PREVIEW ? `<p class="dek">${pend('summary in English (summary_en)')}</p>` : ''}
+      ${has(x.tools) ? chips(x.tools) : ''}
+      <p class="actions">
+        ${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${readLabel(x, 'Read the paper')}</a>` : ''}
+        ${code ? `<a href="${esc(code)}" target="_blank" rel="noopener">Code ↗</a>` : ''}
+      </p>
+    </article>`;
   }
 
   function projectCard(x) {
@@ -332,20 +375,24 @@
     const b = d.blog;
     const blogUrl = safeUrl(b.url);
     const showBlog = d.posts.length || PREVIEW;
-    return `${pageHead('Selected Writing', p.writing_intro, 'intro for this page (writing_intro)')}
-      ${legend()}
+    const postList = d.posts.map((x) => {
+      const u = safeUrl(x.url);
+      const t = has(x.title) ? esc(x.title) : pend('title');
+      return `<li><span class="post-date">${fmtDate(x.date)}</span>${u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${t}</a>` : t}</li>`;
+    }).join('');
+    return `${pageHead('writing', p.writing_intro)}
       <section class="section" style="margin-top:24px">
-        <h2 class="section-title">Opinion columns &amp; essays</h2>
+        <h2 class="section-title">Op-eds</h2>
         ${d.columns.length ? `<div class="grid">${d.columns.map((x) => card({ ...x, _kind: 'column' }, d)).join('')}</div>`
-          : `<p class="empty">${PREVIEW ? 'Add columns in content/writing.yml.' : ''}</p>`}
+          : `<p class="empty">${PREVIEW ? 'Add op-eds in content/writing.yml.' : ''}</p>`}
       </section>
       ${showBlog ? `<section class="section">
-        <h2 class="section-title">Field blog ${blogUrl ? `<a href="${esc(blogUrl)}" target="_blank" rel="noopener">Visit the blog →</a>` : ''}</h2>
+        <h2 class="section-title">Blog from India ${blogUrl ? `<a href="${esc(blogUrl)}" target="_blank" rel="noopener">Visit the blog →</a>` : ''}</h2>
         <div class="series-head">
           <h3>${text(b.name, 'blog name')}</h3>
-          ${has(b.context_en) ? `<p class="dek">${esc(b.context_en)}</p>` : pend('context in English (context_en)')}
+          ${has(b.context_en) ? `<p class="dek">${esc(b.context_en)}</p>` : PREVIEW ? pend('context in English (context_en)') : ''}
         </div>
-        ${d.posts.length ? `<div class="grid">${d.posts.map((x) => card({ ...x, _kind: 'blog', outlet: x.outlet || b.name }, d)).join('')}</div>` : ''}
+        ${postList ? `<ul class="post-list">${postList}</ul>` : ''}
       </section>` : ''}`;
   }
 
@@ -360,7 +407,7 @@
       .sort((a, b) => (ORDER[a._kind] ?? 3) - (ORDER[b._kind] ?? 3) || byDateDesc(a, b));
     const kinds = ['interview', 'quote', 'coverage'].filter((k) => items.some((x) => x._kind === k));
 
-    const html = `${pageHead('Media & Interviews', p.media_intro, 'intro for this page (media_intro)')}
+    const html = `${pageHead('media', p.media_intro)}
       ${has(d.reach.statement) ? `<p class="reach">${esc(d.reach.statement)}</p>` : PREVIEW ? `<p class="reach">${pend('reach statement — see note in media.yml')}</p>` : ''}
       ${rep ? `<p class="filter-note"><span>Showing coverage of <a href="archive.html#${esc(rep.id)}">${esc(bestTitle(rep))}</a></span><a href="media.html">Show all</a></p>` : ''}
       ${legend()}
@@ -404,7 +451,7 @@
           ${has(r.summary_en) ? `<p class="dek">${esc(r.summary_en)}</p>` : PREVIEW ? `<p class="dek">${pend('one-line summary in English')}</p>` : ''}
           <div class="arow-meta">
             ${has(r.roles) ? `<span>My role:</span>${chips(r.roles, ROLE_LABELS)}` : pend('your role(s)')}
-            ${r.featured ? `<a href="research.html#${esc(r.id)}">Featured analysis →</a>` : ''}
+            ${r.featured ? `<a href="#f-${esc(r.id)}">In depth ↑</a>` : ''}
             ${cov ? `<a href="media.html?report=${encodeURIComponent(r.id)}">Media coverage (${cov}) →</a>` : ''}
             ${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">Read ↗</a>` : pend('URL')}
             ${safeUrl(r.pdf) ? `<a href="${esc(safeUrl(r.pdf))}" target="_blank" rel="noopener">PDF ↗</a>` : ''}
@@ -414,7 +461,14 @@
       </li>`;
     }).join('');
 
-    const html = `${pageHead('Publications Archive', p.archive_intro, 'intro for this page (archive_intro)')}
+    const featured = d.reports.filter((r) => r.featured)
+      .sort((a, b) => (Number(a.home) || 99) - (Number(b.home) || 99));
+    const html = `${pageHead('archive', p.archive_intro)}
+      ${featured.length ? `<section>
+        <h2 class="section-title">In depth</h2>
+        ${featured.map((r) => featureReport(r, d)).join('')}
+      </section>` : ''}
+      <h2 class="section-title" id="all" style="margin-top:24px">All reports</h2>
       <div class="filters">
         <input type="search" id="q" placeholder="Search titles and topics" aria-label="Search">
         <select id="year" aria-label="Year"><option value="">All years</option>${years.map((y) => `<option>${y}</option>`).join('')}</select>
@@ -450,7 +504,7 @@
     const p = d.profile;
     const edu = Array.isArray(p.education) ? p.education : [];
     const cv = safeUrl(p.cv_pdf);
-    return `${pageHead('CV & Contact', null, '', '')}
+    return `${pageHead('about', null)}
       <div class="about-grid">
         <div>
           ${has(p.tagline) ? `<p class="lede" style="font-size:1.3rem;color:var(--ink-2)">${esc(p.tagline)}</p>` : ''}
@@ -461,6 +515,7 @@
           ${has(p.focus) ? `<h2 class="section-title" style="margin-top:48px">Areas of focus</h2>${chips(p.focus)}` : ''}
         </div>
         <aside>
+          ${safeUrl(p.photo) ? `<img class="portrait" src="${esc(safeUrl(p.photo))}" alt="Portrait of ${esc(p.name || '')}" width="320" height="320">` : ''}
           <h2 class="section-title">Contact</h2>
           <ul class="contact-list">
             ${has(p.email) ? `<li><span class="label">Email</span><a href="mailto:${esc(p.email)}">${esc(p.email)}</a></li>` : ''}

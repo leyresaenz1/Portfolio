@@ -29,6 +29,7 @@ location: Cambridge, MA
 email: lsaenzguillen@hks.harvard.edu
 linkedin: https://www.linkedin.com/in/leyre-s%C3%A1enz-guill%C3%A9n/
 github: https://github.com/leyresaenz1
+photo: ./assets/photo.jpg    # aparece en la página CV & Contact
 languages: "Spanish and Catalan (native), English (fluent), Portuguese (intermediate), French (basic), Marathi (basic)"
 
 # Sube tu CV en PDF a la carpeta /files y pon aquí la ruta, p. ej.:
@@ -46,7 +47,9 @@ archive_intro: PENDING
 
 # Cifras de la portada. Una cifra solo se publica si "value" y "label" están completos.
 stats:
-  - value: "33"
+  # Oculta por ahora: en el archivo hay 31 informes verificados. Cuando confirmes la cifra,
+  # pon aquí el número y quita "PENDING".
+  - value: PENDING           # "31" o "33"
     label: "reports at Argentinos por la Educación"
   # OJO: tu CV dice "255 live media interviews on local and national television,
   # radio, and newspapers", pero en tu descripción las 255 incluyen también citas
@@ -65,7 +68,7 @@ education:
     years: 2025–2027
   - degree: Master in Economics
     school: Universidad de San Andrés
-    years: 2022–2023
+    years: "2022"            # febrero–diciembre 2022 (tu CV dice 2022–2023: conviene igualarlo)
   - degree: Bachelor in Economics
     school: Universidad de San Andrés
     years: 2018–2021

@@ -1,29 +1,47 @@
 # =========================================================
-# PROYECTOS DE CÓDIGO Y DATOS (GitHub) — R, Python, Stata.
-# Aparecen al final de "Data & Research".
+# RESEARCH — papers propios y proyectos de código (GitHub).
+# Aparecen en la página "Research".
+#   type: paper   -> sección "Papers"
+#   cualquier otro type -> sección "Code & data"
 # =========================================================
 
 projects:
 
-  # De tu CV. Completa resumen y herramientas.
+  # Datos verificados en RePEc (21-nov-2026): autoría única, serie
+  # "Asociación Argentina de Economía Política: Working Papers".
+  # El título en inglés es el que usas en tu CV.
   - id: p01
-    draft: false
-    type: Undergraduate thesis
-    title: "The COVID-19 Lockdown and Its Impact on Fertility in Argentina"
-    title_en: ""
-    date: "2021"
-    language: PENDING        # idioma del repositorio/tesis: es | en
-    url: https://github.com/leyresaenz1/Tesis-Economia
+    type: paper
+    venue: "AAEP Annual Meeting · Working Paper"
+    note: "Undergraduate thesis, Universidad de San Andrés"
+    title: "El Aislamiento Social, Preventivo y Obligatorio del COVID-19: impacto sobre la fecundidad en Argentina"
+    title_en: "The COVID-19 Lockdown and Its Impact on Fertility in Argentina"
+    date: "2022-11"
+    language: es
+    url: https://ideas.repec.org/p/aep/anales/4596.html
+    code: https://github.com/leyresaenz1/Tesis-Economia
     tools: []                # p. ej. [Stata, R]
-    summary_en: PENDING
+    summary_en: PENDING      # opcional: 1–2 frases tuyas
 
-  # ---- PLANTILLA ----
   - id: p02
-    draft: true
-    type: PENDING            # p. ej. Data analysis, Scraper, Visualization
-    title: PENDING
-    date: PENDING
-    language: en
-    url: PENDING
+    type: paper
+    venue: "AAEP Annual Meeting · Working Paper"
+    note: "Master's thesis, Universidad de San Andrés"
+    title: "¿Menos es Siempre Más?: Efectos del tamaño del aula en el rendimiento educativo en el contexto de la Transición Demográfica en Argentina"
+    title_en: "Is Less Always More? Effects of Classroom Size on Educational Achievement in the Context of the Demographic Transition in Argentina"
+    date: "2024-11"
+    language: es
+    url: https://ideas.repec.org/p/aep/anales/4761.html
+    code: ""
     tools: []
     summary_en: PENDING
+
+  # ---- PLANTILLA para proyectos de código ----
+  # - id: p03
+  #   type: Data analysis
+  #   title: ""
+  #   date: ""
+  #   language: en
+  #   url: ""                # enlace al repositorio
+  #   tools: [Python]
+  #   summary_en: ""

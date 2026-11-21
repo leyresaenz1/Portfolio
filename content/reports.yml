@@ -263,6 +263,14 @@ reports:
     roles: [data-analysis, experts, media]
     topics: []
     summary_en: PENDING
+    featured: true
+    home: 2
+    question: PENDING
+    findings:
+      - PENDING
+    contribution: PENDING
+    tools: []
+    data_sources: []         # completa (p. ej. Aprender, Relevamiento Anual)
 
   - id: r20
     title: "Sistemas nominales de información educativa en Argentina"
@@ -359,6 +367,14 @@ reports:
     roles: [data-analysis, experts, media]
     topics: []
     summary_en: PENDING
+    featured: true
+    home: 1
+    question: PENDING
+    findings:
+      - PENDING
+    contribution: PENDING
+    tools: []
+    data_sources: [PISA 2012, PISA 2022]   # según la página del informe (7 países)
 
   - id: r28
     title: "El nivel socioeconómico no lo define todo: el rol de las escuelas en el rendimiento"
@@ -395,6 +411,14 @@ reports:
     roles: [data-analysis, experts, media]
     topics: []
     summary_en: PENDING
+    featured: true
+    home: 3
+    question: PENDING
+    findings:
+      - PENDING
+    contribution: PENDING
+    tools: []
+    data_sources: [Aprender 2023 (6th grade), Provincial education spending 2012–2023]   # según la página del informe
 
   - id: r31
     title: "Institutos de formación docente"
