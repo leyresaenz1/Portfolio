@@ -12,6 +12,41 @@
 # draft: true -> se oculta en la web pública.
 # =========================================================
 
+# Lista compacta al final de "Media & Interviews": más entrevistas en radio y TV
+# publicadas en YouTube (canal, título y fecha de subida verificados el 21-nov-2026).
+# No incluye las que ya están arriba como tarjeta. Formato: una línea por vídeo.
+more:
+  - { date: "2025-07-28", outlet: "Al Derecho y Al Revés (radio)", title: "Hoy con Jorge Valerga Araoz y Leyre Saenz Guillen", url: "https://www.youtube.com/watch?v=n0fvxZca2KI" }
+  - { date: "2025-07-04", outlet: "Puntal AM", title: "En 10 años aumentó 54% la cantidad de docentes, pero sólo 1% de alumnos", url: "https://www.youtube.com/watch?v=4Hkmoo3o1vk" }
+  - { date: "2025-07-03", outlet: "Ahora Cero Radio", title: "La analista del Observatorio Argentinos por la Educación en Ahora o Nunca", url: "https://www.youtube.com/watch?v=RzF4-ND4YCo" }
+  - { date: "2025-03-21", outlet: "Puntal AM", title: "Mensaje Directo con Leyre Sáenz Guillén", url: "https://www.youtube.com/watch?v=NUm1f5S1yqQ" }
+  - { date: "2025-02-17", outlet: "Puntal AM", title: "19 provincias definieron enfoques para enseñar a leer y escribir", url: "https://www.youtube.com/watch?v=Is7PyDWDNn4" }
+  - { date: "2024-12-16", outlet: "Puntal AM", title: "Mensaje Directo con Leyre Sáenz Guillén", url: "https://www.youtube.com/watch?v=A4254r2WQiY" }
+  - { date: "2024-12-16", outlet: "LV12 Tucumán", title: "Leyre Saenz Guillen", url: "https://www.youtube.com/watch?v=RIMr3c_e9Pg" }
+  - { date: "2024-12-04", outlet: "Seba Schapiro", title: "Sebastian Schapiro con Leyre Saenz Guillén, analista de datos Argentinos por la Educación", url: "https://www.youtube.com/watch?v=AVv-JW-MKXw" }
+  - { date: "2024-11-28", outlet: "LV12 Tucumán", title: "Leyre Sáenz Guillén", url: "https://www.youtube.com/watch?v=V-lGIa_SPAg" }
+  - { date: "2024-11-22", outlet: "Puntal AM", title: "Menos de la mitad de las provincias tienen datos actualizados", url: "https://www.youtube.com/watch?v=Sm9QY8T10MM" }
+  - { date: "2024-11-01", outlet: "Jujuy al Momento", title: "Sobremesa: Leyre Sáenz Guillén, analista de datos de Argentinos por la Educación", url: "https://www.youtube.com/watch?v=cGx8NwGWa_w" }
+  - { date: "2024-10-31", outlet: "El Observador 107.9", title: "Las notas en las escuelas primarias", url: "https://www.youtube.com/watch?v=sh_DB59vJYI" }
+  - { date: "2024-10-19", outlet: "Eco Medios", title: "La Usina: Leyre Sáenz Guillén, economista y analista de datos", url: "https://www.youtube.com/watch?v=ar_acao1EBs" }
+  - { date: "2024-09-26", outlet: "LV12 Tucumán", title: "Leyre Sáenz Guillén", url: "https://www.youtube.com/watch?v=9anjuQtfDdw" }
+  - { date: "2024-09-09", outlet: "Puntal AM", title: "En Argentina uno de cada dos chicos de 3er grado no entiende lo que lee", url: "https://www.youtube.com/watch?v=28zh2XsLouE" }
+  - { date: "2024-08-22", outlet: "Entre Líneas", title: "Entre Líneas con Leyre Sáenz Guillén", url: "https://www.youtube.com/watch?v=70pOyoGpH6Q" }
+  - { date: "2024-08-08", outlet: "Puntal AM", title: "En las escuelas más pobres, 3 de cada 10 maestros son suplentes", url: "https://www.youtube.com/watch?v=P18RiAhb6k0" }
+  - { date: "2024-08-08", outlet: "LV12 Tucumán", title: "Leyre Sáenz Guillén", url: "https://www.youtube.com/watch?v=QV46AImttkU" }
+  - { date: "2024-07-11", outlet: "ATP Santa Fe", title: "Jóvenes quieren seguir estudiando", url: "https://www.youtube.com/watch?v=r1TAf78sh6E" }
+  - { date: "2024-05-30", outlet: "24/7 Canal de Noticias", title: "22 de cada 100 chicos llegan a los 15 años sin repetir ni abandonar", url: "https://www.youtube.com/watch?v=Bj-fNNqhFtc" }
+  - { date: "2024-03-08", outlet: "FM 99.9 Mar del Plata", title: "Noticias & Protagonistas", url: "https://www.youtube.com/watch?v=ucXB8DQTl94" }
+  - { date: "2024-02-22", outlet: "LV12 Tucumán", title: "Leyre Sáenz Guillén", url: "https://www.youtube.com/watch?v=7hxCuDFFeuU" }
+  - { date: "2024-02-22", outlet: "106.3 Radio City y RDM TV (Santiago del Estero)", title: "Leyre Sáenz Guillén (Observatorio de Argentinos por la Educación)", url: "https://www.youtube.com/watch?v=UiMII-HdRO8" }
+  - { date: "2024-01-26", outlet: "Red de Medios Santiago", title: "Mujeres versus hombres, de la escuela al mercado laboral", url: "https://www.youtube.com/watch?v=_k4TIDDTog8" }
+  - { date: "2023-12-06", outlet: "LT7 Noticias (Corrientes)", title: "Resultados de las pruebas PISA en Argentina", url: "https://www.youtube.com/watch?v=AipXY1ZLIQA" }
+  - { date: "2023-12-05", outlet: "LT7 Noticias (Corrientes)", title: "Pruebas PISA: charlamos con Leyre Sáenz Guillén", url: "https://www.youtube.com/watch?v=w1KMd47mVZE" }
+  - { date: "2023-11-10", outlet: "Ahora Cero Radio", title: "Financiamiento educativo público a alumnos desfavorecidos", url: "https://www.youtube.com/watch?v=ajCXySOYNQg" }
+  - { date: "2023-08-29", outlet: "Radio Fisherton (Rosario)", title: "Analista de datos del Observatorio de Argentinos por la Educación", url: "https://www.youtube.com/watch?v=tQg0dNApRWA" }
+  - { date: "2023-08-26", outlet: "El Explorador", title: "Leyre Sáenz Guillén, analista de datos y coautora del informe", url: "https://www.youtube.com/watch?v=LfPE7LqYikA" }
+  - { date: "2023-07-11", outlet: "TV Coop Justiniano Posse", title: "Argentinos por la Educación", url: "https://www.youtube.com/watch?v=XKlCD5XCgDM" }
+
 reach:
   # Frase sobre el alcance total. Debe ser exacta. Tu CV dice
   # "255 live media interviews ... between 2023 and 2025", pero tu

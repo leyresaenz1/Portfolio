@@ -17,19 +17,19 @@
   const SECTIONS = {
     research: {
       title: 'Research',
-      desc: 'Papers I wrote as sole author and presented at academic conferences, with the code behind them.',
+      desc: 'Sole-authored working papers presented at the Annual Meetings of the Argentine Association of Political Economy (AAEP).',
     },
     archive: {
       title: 'Policy Reports',
-      desc: 'Reports I co-authored at the Data Observatory of Argentinos por la Educación (2023–2025): a few in depth, then the full list with links to the originals (in Spanish) and their press coverage.',
+      desc: 'Reports co-authored at the Data Observatory of Argentinos por la Educación, 2023–2025. Originals are in Spanish; press coverage is linked where available.',
     },
     media: {
       title: 'Media & Interviews',
-      desc: 'A selection of TV and radio interviews, and of articles by other journalists that covered or cited my reports.',
+      desc: 'Selected television and radio interviews, and press coverage of my research by other journalists.',
     },
     writing: {
       title: 'Op-eds & Blog',
-      desc: 'Opinion pieces I wrote and signed, and a blog from my summer fieldwork in India.',
+      desc: 'Signed opinion pieces in Argentine newspapers, and a blog written during a 2026 internship with The Antara Foundation in India.',
     },
     about: { title: 'CV & Contact', desc: '' },
   };
@@ -153,6 +153,7 @@
       posts: visible(blog.posts).sort(byDateDesc),
       reach: media.reach || {},
       media: visible(media.items).sort(byDateDesc),
+      more: visible(media.more).sort(byDateDesc),
       projects: visible(projects.projects),
     };
     d.reportById = Object.fromEntries(d.reports.map((r) => [r.id, r]));
@@ -191,9 +192,9 @@
 
   const legend = () =>
     `<ul class="legend" aria-label="Legend">
-      <li>${badge('column')} written and signed by me</li>
-      <li>${badge('report')} team report I worked on</li>
-      <li><span class="badge b-press">Press</span> by other journalists: interviews, quotes, coverage</li>
+      <li><span class="badge b-own">Sole author</span> papers, op-eds and blog</li>
+      <li><span class="badge b-team">Co-authored</span> policy reports</li>
+      <li><span class="badge b-press">Press</span> interviews, citations and coverage by other journalists</li>
     </ul>`;
 
   function pageHead(key, intro) {
@@ -415,7 +416,16 @@
         <button type="button" data-kind="" aria-pressed="true">All</button>
         ${kinds.map((k) => `<button type="button" data-kind="${k}" aria-pressed="false">${KIND[k].label}</button>`).join('')}
       </div>
-      <div class="grid" id="media-list"></div>`;
+      <div class="grid" id="media-list"></div>
+      ${d.more.length && !rep ? `<section class="section">
+        <h2 class="section-title">Additional radio and television appearances (${d.more.length})</h2>
+        <p class="section-note">Interviews with regional and national broadcasters across Argentina, as published on the outlets' YouTube channels. All in Spanish.</p>
+        <ul class="post-list wide">${d.more.map((x) => {
+          const u = safeUrl(x.url);
+          const t = esc(x.title || '');
+          return `<li><span class="post-date">${fmtDate(x.date)}</span><span><span class="more-outlet">${esc(x.outlet || '')}</span> — ${u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${t}</a>` : t}</span></li>`;
+        }).join('')}</ul>
+      </section>` : ''}`;
 
     setTimeout(() => {
       const list = document.getElementById('media-list');
@@ -451,7 +461,6 @@
           ${has(r.summary_en) ? `<p class="dek">${esc(r.summary_en)}</p>` : PREVIEW ? `<p class="dek">${pend('one-line summary in English')}</p>` : ''}
           <div class="arow-meta">
             ${has(r.roles) ? `<span>My role:</span>${chips(r.roles, ROLE_LABELS)}` : pend('your role(s)')}
-            ${r.featured ? `<a href="#f-${esc(r.id)}">In depth ↑</a>` : ''}
             ${cov ? `<a href="media.html?report=${encodeURIComponent(r.id)}">Media coverage (${cov}) →</a>` : ''}
             ${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">Read ↗</a>` : pend('URL')}
             ${safeUrl(r.pdf) ? `<a href="${esc(safeUrl(r.pdf))}" target="_blank" rel="noopener">PDF ↗</a>` : ''}
@@ -461,14 +470,7 @@
       </li>`;
     }).join('');
 
-    const featured = d.reports.filter((r) => r.featured)
-      .sort((a, b) => (Number(a.home) || 99) - (Number(b.home) || 99));
     const html = `${pageHead('archive', p.archive_intro)}
-      ${featured.length ? `<section>
-        <h2 class="section-title">In depth</h2>
-        ${featured.map((r) => featureReport(r, d)).join('')}
-      </section>` : ''}
-      <h2 class="section-title" id="all" style="margin-top:24px">All reports</h2>
       <div class="filters">
         <input type="search" id="q" placeholder="Search titles and topics" aria-label="Search">
         <select id="year" aria-label="Year"><option value="">All years</option>${years.map((y) => `<option>${y}</option>`).join('')}</select>
