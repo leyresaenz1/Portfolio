@@ -33,7 +33,7 @@ languages: "Spanish and Catalan (native), English (fluent), Portuguese (intermed
 
 # Sube tu CV en PDF a la carpeta /files y pon aquí la ruta, p. ej.:
 # cv_pdf: files/CV_Leyre_Saenz_Guillen.pdf
-cv_pdf: files/CV_Leyre_Saenz_Guillen.pdf
+cv_pdf: ./CV_Leyre_Saenz_Guillen.pdf
 
 # Fecha de la última actualización (aparece en el pie). Formato AAAA-MM-DD.
 updated: PENDING
